@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: " en-US" }}">
+
+<head>
+  <meta charset="UTF-8">
+
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap" as="style"
+    type="text/css" crossorigin>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#6200ee">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <!-- Google Fonts -->
+  <link rel="stylesheet  href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tagalog&family=Raleway">
+  <link rel="icon" type="image/x-icon" href="{{ '/favicon.png' | relative_url }}">
+  {% include head-custom.html %}
+  
+  <style>
+      .header-link{
+        color: #dbdbdb;
+      }
+  </style>
+  
+</head>
+
+<body>
+  <a id="skip-to-content" href="#content">Skip to the content.</a>
+
+  <nav style="height:50px;background-color: #6200ee; width: 100%;">
+
+      <h1 class="project-name" style="font-size: 2.25rem; font-family: 'Raleway', sans-serif; padding-left: 1em; font-weight: normal; color: white; ">
+        <span style="font-family: 'Noto Sans Tagalog';">ᜐ</span> <a href="{{ site.github.url }}" style="color: white;"> {{ site.title | default: site.github.repository_name }}</a> | 
+        <span style="font-size: 1.25rem;">
+          <a class="header-link" href="{{ site.github.url }}/download"> Download </a> · 
+          <a class="header-link" href="{{ site.github.url }}/docs/about"> Documentation </a> 
+        </span>
+      </h1>
+    
+  </nav>
+
+
+  <table style="width:100%; border:none">
+    <tr>
+      <td style="width:20%; border-right: solid 1px #eff0f1; vertical-align: top; padding: 1em;">
+        {% include sidebar.html %}
+      </td>
+      <td style="width:60%; border:none; padding: 0;">
+        <main id="content" class="main-content" role="main">
+          {{ content }}
+        </main>
+      </td>
+      <td style="width:20%; border:none; vertical-align: top; padding: 1em;">
+        Contents <br/>
+        {% include toc.html html=content h_min=2 %}
+      </td>
+    </tr>
+  </table>
+
+  {% include footer.html %}
+</body>
+
+</html>

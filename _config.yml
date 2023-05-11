@@ -1,0 +1,20 @@
+title: AralTools
+description: A suite of tools for students.
+
+#theme: cayman
+remote_theme: pages-themes/cayman@v0.2.0
+plugins:
+  - jekyll-remote-theme # add this line to the plugins list if you already have one
+  - jekyll-include-cache
+show_downloads: true
+
+# SITE CONFIGURATION
+baseurl: "/araltools-doc"
+url: "https://tudlang.github.io"
+
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "default"
